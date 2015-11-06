@@ -1,0 +1,22 @@
+{
+  "name": "angular-bundle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-cookies": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "angular-sanitize": "^1.4.7"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "description": ""
+}

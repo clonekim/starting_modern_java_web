@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app>
+<head>   
+    <meta charset="utf-8">
+    <script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+       
+    <div ng-init="num=42" >
+    	{{num}}
+    </div>
+
+	<div ng-init="items = ['사과', '감', '배', '복숭아']">
+	  <ul>
+		<li ng-repeat="item in items">
+		  {{item}}
+		</li>
+	  </ul>
+	</div>
+
+
+</body>
+</html>
+
+

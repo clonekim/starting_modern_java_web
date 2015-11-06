@@ -1,0 +1,36 @@
+
+<div class="panel panel-default"  ng-cloak>
+ <div class="panel-body">
+   <div class="row">
+
+     <div class="panel-body">
+       <div class="row">
+         <div class="text-left"><a href="/">처음</a></div>
+        </div>
+     
+       <div class="row">
+         <div class="col-xs-12 col-sm-6"><h3>{{good.name}}</h3></div>
+       </div>
+	   <div class="row">
+	      <div class="col-xs-12 col-sm-6"><img src="img/{{good.img}}" class="img-thumbnail"></div>
+	      <div class="col-xs-12 col-sm-6">
+	          <div class="row">
+		          <div>{{good.desc|newLine}}</div>
+		      </div>
+		      <div class="row">
+					<div class="col-sm-6" ng-init="qty=1">
+	      	           <input type="number" size="2" style="width:50px;" ng-model="qty" > {{ qty* good.price|currency:"":0}} 원
+	      	        </div>
+      	       </div>
+	      </div>
+       </div>
+       <p/>
+       <p/>       
+       <div class="row text-center">
+          <button class="btn btn-primary" ng-click="addToCart(good, qty)">Add to Cart</button>
+          <button class="btn btn-default">Buy now</button>
+       </div>
+   </div>
+  </div>
+ </div>
+</div>
