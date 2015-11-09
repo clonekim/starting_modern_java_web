@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="app">
+<head>   
+    <meta charset="utf-8">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript">
+    	var appModule = angular.module('app', []);
+		appModule.controller('myController', function($scope) {
+ 
+			$scope.message = 'Hello World'; 
+			$scope.action = function() { 
+				alert("Good Bye");
+			}
+		});
+    </script>
+
+</head>
+<body>
+   
+    <h1 ng-init="name='Hello, Angular'"> {{name}} </h1>
+    
+    <div ng-init="variable=42" >
+    	{{variable}}
+    </div>
+
+	<div ng-init="items = ['사과', '감', '배', '복숭아']">
+	  <ul>
+		<li ng-repeat="item in items">
+		  {{item}}
+		</li>
+	  </ul>
+	</div>
+
+   <input type="text" ng-model="message">
+   <div>
+    {{message}}
+   </div>
+   
+   <div ng-controller="myController">
+   		{{message}}
+   		<button type="button" ng-click="action()">click</button>
+   </div>
+
+</body>
+</html>
+
+

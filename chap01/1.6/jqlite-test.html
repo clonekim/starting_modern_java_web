@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="angular.min.js"></script>
+  </head>
+  <body>
+    <div id="hello">here</div>
+    	 <button id="clickbt1">add click</button>
+    	 <button id="clickbt2">remove click</button>
+	 
+	 	<script>
+	   	var cnt = 0;
+      var el = angular.element(document.getElementById("hello"));
+      
+      el.ready(function(){
+        console.log("ready...");       
+      });
+      
+      angular.element(document.getElementById("clickbt1")).on('click', function() {        
+          el.append("<div>Say Hello#" + cnt++ + "</div>");
+       });
+
+      angular.element(document.getElementById("clickbt2")).on('click', function() {
+          el.children().eq(--cnt).remove();
+      });
+	</script>
+	
+  </body>
+</html>
+
